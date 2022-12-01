@@ -1,0 +1,68 @@
+/* Medium devices */
+@media screen and (max-width: 810px) {
+  /* body {
+    background: rgb(139, 0, 139);
+  } */
+
+  .primary-nav {
+    display: none;
+  }
+
+  .flex-row-rev-space {
+    flex-direction: column;
+  }
+
+  .grid-section--1 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-section--2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-section--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-section--4 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-prop {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Explore */
+
+  .kids-section-grid {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr;
+  }
+
+  /* Special Events */
+
+  .article-margin {
+    margin: auto;
+  }
+
+  .event-card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .event-card-item:nth-child(1) {
+    order: 1;
+  }
+
+  .event-card-item:nth-child(2) {
+    order: 2;
+  }
+}
+
+/* Small devices */
+@media screen and (max-width: 370px) {
+  body {
+    background: rgb(183, 255, 178);
+  }
+}

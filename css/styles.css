@@ -1,4 +1,353 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+:root {
+  --color-1: #8a35f5;
+  --color-2: #64ed4e;
+  --color-3: #ff6846;
+  --color-4: #2f3e45;
+  --color-5: #e6f4f9;
+
+  --color-1-trans: rgba(138, 53, 245, 0.4);
+  --color-2-trans: rgba(100, 237, 78, 0.4);
+  --color-3-trans: rgba(255, 104, 70, 0.4);
+  --color-4-trans: rgba(47, 62, 69, 0.4);
+
+  --border-normal: 5px;
+  --border-all: 2px solid rgba(0, 0, 0, 0.1);
+
+  --font-xl: clamp(2rem, 3.5vw, 3.5rem);
+  --font-l: clamp(1.85rem, 3.5vw, 2.6rem);
+  --font-m: clamp(1.65rem, 3.5vw, 1.6rem);
+  --font-s: clamp(1.4rem, 3.5vw, 1.4rem);
+  --font-xs: clamp(0.9rem, 3.5vw, 1rem);
+
+  --gap-l: 1.5rem;
+  --gap-m: 1rem;
+  --gap-s: 0.5rem;
+
+  --transition-1: 300ms ease;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background: var(--color-5);
+}
+
+.container {
+  width: min(100% - 1rem, 95em);
+  margin-inline: auto;
+}
+
+/* Header */
+
+.primary-header {
+  background: rgb(74, 21, 110);
+  background: linear-gradient(
+    118deg,
+    rgba(74, 21, 110, 1) 0%,
+    rgba(185, 29, 253, 1) 50%,
+    rgba(252, 107, 69, 1) 100%
+  );
+  padding: 1rem 0.5rem;
+}
+
+.website-logo {
+  width: 200px;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav-link {
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+  transition: var(--transition-1);
+}
+
+.nav-link:hover {
+  color: var(--color-2);
+}
+
+/* Hero */
+
+.hero-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.hero-title::before {
+  content: "Come join us";
+  color: white;
+  font-size: clamp(0.8rem, 3.5vw, 1.3rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  display: block;
+}
+
+/* Flexbox */
+
+.flex-row-gap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-m);
+}
+
+.flex-row-space {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-row-rev-space {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Grid */
+
+.grid-section--1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--gap-l);
+}
+
+.grid-section--2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-l);
+}
+
+.grid-section--3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-l);
+}
+
+.grid-section--4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-l);
+}
+
+/* Cards */
+
+.card-purple {
+  background: var(--color-1-trans);
+}
+
+.card-green {
+  background: var(--color-2-trans);
+}
+
+.card-orange {
+  background: var(--color-3-trans);
+}
+
+.card-dark {
+  background: var(--color-4);
+}
+
+.card-lightdark {
+  background: var(--color-4-trans);
+}
+
+.card-prop {
+  border: var(--border-all);
+  border-radius: var(--border-normal);
+  min-height: min-content;
+  padding: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+/* Event images */
+
+.event-image-1 {
+  background-image: url(/images/specialevent_img_01.jpg);
+}
+
+.event-image-2 {
+  background-image: url(/images/specialevent_img_02.jpg);
+}
+
+.event-image-3 {
+  background-image: url(/images/specialevent_img_03.jpg);
+}
+
+.event-home-size {
+  width: 100%;
+  height: 290px;
+}
+
+.img-prop {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: var(--border-normal);
+}
+
+/* Buttons */
+
+.btn-primary {
+  color: white;
+  background: var(--color-4);
+}
+
+.btn-primary:hover {
+  background: var(--color-1);
+  padding: 0.5rem 1.3rem;
+  letter-spacing: 2px;
+  rotate: 1deg;
+}
+
+.btn-primary-outline {
+  color: var(--color-3);
+  border: 2px solid var(--color-3);
+  background: transparent;
+}
+
+.btn-prop {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-normal);
+  display: block;
+  width: max-content;
+  transition: var(--transition-1);
+}
+
+/****** Home ******/
+
+.museum-image-1 {
+  background-image: url(/images/museum-image-1.jpg);
+  width: 100%;
+}
+
+.museum-image-2 {
+  background-image: url(/images/museum-image-2.jpg);
+  width: 100%;
+}
+
+/****** Explore ******/
+
+.explore-kids-image-1 {
+  background-image: url(/images/explore-kids-image-01.jpg);
+  width: 100%;
+  height: 270px;
+}
+
+.explore-kids-image-2 {
+  background-image: url(/images/explore-kids-image-02.jpg);
+  width: 100%;
+  height: 270px;
+}
+
+.explore-image-1,
+.explore-image-2 {
+  width: 100%;
+}
+
+.kids-section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--gap-l);
+}
+
+.kids-section-item:nth-child(1) {
+  grid-row: 1 / 3;
+}
+
+/****** Special Events & Exhibitions ******/
+
+.section-header {
+  border: hotpink 2px dotted;
+  width: min(100% - 2rem, 50rem);
+  position: relative;
+}
+
+.article-margin {
+  margin: 3rem;
+}
+
+.specialevent-size {
+  width: 100%;
+  min-height: 400px;
+}
+
+.event-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.event-card-item:nth-child(1) {
+  order: 2;
+}
+
+.event-card-item:nth-child(2) {
+  order: 1;
+}
+
+/* Footer */
+
+.page-footer {
+  background: var(--color-4);
+  padding: 1rem 0.5rem;
+}
+
+.nav-footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.some-icons {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.fa-facebook::after {
+  content: "Facebook";
+  font-family: "Space Grotesk", sans-serif;
+  margin-left: 1rem;
+  font-size: var(--font-xs);
+  transition: var(--transition-1);
+}
+
+.fa-snapchat::after {
+  content: "Snapchat";
+  font-family: "Space Grotesk", sans-serif;
+  margin-left: 1rem;
+  font-size: var(--font-xs);
+  transition: var(--transition-1);
+}
+
+.fa-instagram::after {
+  content: "Instagram";
+  font-family: "Space Grotesk", sans-serif;
+  margin-left: 1rem;
+  font-size: var(--font-xs);
+  transition: var(--transition-1);
+}
+
+.fa-facebook:hover::after,
+.fa-snapchat:hover::after,
+.fa-instagram:hover::after {
+  color: var(--color-3);
 }
