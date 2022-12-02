@@ -6,16 +6,16 @@
 --font-xs: 17px;  
 */
 
-h1 {
+/* h1 {
   font-size: var(--font-xl);
   font-weight: 600;
-}
+} */
 
-h2 {
-  font-size: var(--font-l);
+/* h2 {
+  font-size: var(--font-m);
   font-weight: 500;
   margin-bottom: 1rem;
-}
+} */
 
 h3 {
   font-size: var(--font-m);
@@ -30,11 +30,43 @@ h4 {
 }
 
 p {
-  font-size: var(--font-xs);
+  font-size: var(--font-paragraph);
   margin-bottom: 0.7rem;
 }
 
+/* Major Fontstyles */
+
+.section-title {
+  font-size: var(--font-l);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.sub-title {
+  font-size: var(--font-m);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  color: purple;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.card-heading {
+  color: red;
+  font-size: 1.75rem;
+}
+
 /* Additional Fontstyles */
+
+.hero-title {
+  color: white;
+  font-size: clamp(2.6rem, 3.5vw, 6rem);
+  font-weight: 500;
+}
 
 .footer-title {
   color: var(--color-2);

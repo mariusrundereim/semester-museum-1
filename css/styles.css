@@ -25,6 +25,7 @@
   --font-m: clamp(1.65rem, 3.5vw, 1.6rem);
   --font-s: clamp(1.4rem, 3.5vw, 1.4rem);
   --font-xs: clamp(0.9rem, 3.5vw, 1rem);
+  --font-paragraph: 1.25rem;
 
   --gap-l: 1.5rem;
   --gap-m: 1rem;
@@ -43,6 +44,15 @@ body {
   margin-inline: auto;
 }
 
+.main-wrap {
+  display: flex;
+  flex-direction: column;
+  /**/
+  gap: 3rem;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
 /* Header */
 
 .primary-header {
@@ -53,7 +63,7 @@ body {
     rgba(185, 29, 253, 1) 50%,
     rgba(252, 107, 69, 1) 100%
   );
-  padding: 1rem 0.5rem;
+  padding: 2rem 0.5rem;
 }
 
 .website-logo {
@@ -171,7 +181,6 @@ body {
   border-radius: var(--border-normal);
   min-height: min-content;
   padding: 1.5rem;
-  margin-bottom: 4rem;
 }
 
 /* Event images */
@@ -302,6 +311,12 @@ body {
   order: 1;
 }
 
+/****** Visit ******/
+
+.museum-store-image-1 {
+  background-image: url(/images/museum-store-image-1.jpg);
+}
+
 /* Footer */
 
 .page-footer {
@@ -326,7 +341,7 @@ body {
   content: "Facebook";
   font-family: "Space Grotesk", sans-serif;
   margin-left: 1rem;
-  font-size: var(--font-xs);
+  font-size: var(--font-paragraph);
   transition: var(--transition-1);
 }
 
@@ -334,7 +349,7 @@ body {
   content: "Snapchat";
   font-family: "Space Grotesk", sans-serif;
   margin-left: 1rem;
-  font-size: var(--font-xs);
+  font-size: var(--font-paragraph);
   transition: var(--transition-1);
 }
 
@@ -342,7 +357,7 @@ body {
   content: "Instagram";
   font-family: "Space Grotesk", sans-serif;
   margin-left: 1rem;
-  font-size: var(--font-xs);
+  font-size: var(--font-paragraph);
   transition: var(--transition-1);
 }
 
