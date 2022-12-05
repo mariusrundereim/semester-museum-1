@@ -49,14 +49,12 @@ p {
 }
 
 .card-title {
-  color: purple;
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 1.25rem;
 }
 
 .card-heading {
-  color: red;
   font-size: 1.75rem;
 }
 
@@ -79,4 +77,8 @@ p {
   color: white;
   font-size: var(--font-s);
   font-weight: 400;
+}
+
+.date-title {
+  margin-top: 1rem;
 }

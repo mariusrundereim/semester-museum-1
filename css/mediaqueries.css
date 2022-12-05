@@ -1,5 +1,5 @@
 /* Medium devices */
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1000px) {
   /* body {
     background: rgb(139, 0, 139);
   } */
@@ -17,7 +17,7 @@
   }
 
   .grid-section--2 {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .grid-section--3 {
@@ -26,6 +26,10 @@
 
   .grid-section--4 {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-section--5 {
+    grid-template-columns: 1fr;
   }
 
   .card-prop {
@@ -38,6 +42,28 @@
   .kids-section-grid {
     grid-template-columns: auto;
     grid-template-rows: 1fr;
+  }
+
+  /* Exhibition */
+
+  .exhibition-section:nth-child(1) {
+    grid-column: 1 / 2;
+  }
+
+  .exhibition-section:nth-child(2) {
+    grid-column: 1 / 2;
+  }
+
+  .exhibition-section:nth-child(3) {
+    grid-column: 1 / 2;
+  }
+
+  .exhibition-section:nth-child(4) {
+    grid-column: 1 / 2;
+  }
+
+  .exhibition-section:nth-child(5) {
+    grid-column: 1 / 2;
   }
 
   /* Special Events */
@@ -61,8 +87,12 @@
 }
 
 /* Small devices */
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 510px) {
   body {
     background: rgb(183, 255, 178);
+  }
+
+  .grid-section--2 {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
