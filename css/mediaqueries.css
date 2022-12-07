@@ -9,7 +9,13 @@
   }
 
   .flex-row-rev-space {
-    flex-direction: column;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .flex-row-rev-flip {
+    flex-direction: column-reverse;
+    align-items: center;
   }
 
   .grid-section--1 {
@@ -31,6 +37,18 @@
   .grid-section--5 {
     grid-template-columns: 1fr;
   }
+
+  /* .grid-section--footer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .footer-item:nth-child(1) {
+    display: grid;
+    grid-column: 1 / 4;
+    border: blue 1px solid;
+    justify-items: end;
+  } */
 
   .card-prop {
     padding: 0.8rem;
@@ -87,12 +105,43 @@
 }
 
 /* Small devices */
-@media screen and (max-width: 510px) {
-  body {
-    background: rgb(183, 255, 178);
-  }
-
+@media screen and (max-width: 400px) {
   .grid-section--2 {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  /* Explore */
+
+  .graphic-element-youngstar {
+    display: none;
+  }
 }
+
+/* Responsive Menu - Start */
+
+@media (min-width: 1000px) {
+  nav {
+    display: block;
+    position: static;
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  nav a {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 1000px) {
+  nav {
+    background: var(--color-1);
+    margin-top: 10rem;
+    width: 100%;
+    padding: 20px 0px;
+    border-radius: var(--border-normal);
+  }
+}
+
+/* Responsive Menu - End */

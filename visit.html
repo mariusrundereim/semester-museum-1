@@ -23,29 +23,35 @@
   <body>
     <header class="primary-header">
       <section class="container flex-row-rev-space">
-        <a href="index.html">
-          <img
-            class="website-logo"
+        <a class="website-logo" href="index.html"
+          ><img
             src="/images/svg/csm-logo-white.svg"
             alt="Community Science Museum Logo"
-          />
-        </a>
+        /></a>
+        <input type="checkbox" id="menu-checkbox" />
+        <label for="menu-checkbox" class="hamburger-icon"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
 
+        <!-- Navigation -->
         <nav class="primary-nav">
           <ul class="nav-list">
-            <li class="nav-item">
+            <li class="nav-item page-tag-01 page-tag-details">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item page-tag-02 page-tag-details">
               <a class="nav-link" href="explore.html">Explore</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item page-tag-03 page-tag-details">
               <a class="nav-link" href="exhibition.html">Exhibition Spaces</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item page-tag-04 page-tag-details">
               <a class="nav-link" href="specialevents.html">Special Events</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item page-tag-05 page-tag-details">
               <a class="nav-link" href="visit.html">Visit</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item page-tag-06 page-tag-details">
               <a class="nav-link" href="get-involved.html">Get involved</a>
             </li>
           </ul>
@@ -53,38 +59,30 @@
       </section>
     </header>
     <main class="container main-wrap">
-      <h1>Visit</h1>
+      <h1 class="page-visit-number">Visit</h1>
       <section class="grid-section--3 card-grid-prop">
         <article>
           <h1 class="section-title">Opening hours</h1>
           <article class="card-prop">
-            <div>
-              <p>Monday:</p>
-              <p>Closed</p>
-            </div>
-            <div>
-              <p>Tuesday:</p>
-              <p>10:00 – 16:00</p>
-            </div>
-            <div>
-              <p>Wednesday:</p>
-              <p>10:00 – 16:00</p>
-            </div>
-            <div>
-              <p>Thursday:</p>
-              <p>10:00 – 16:00</p>
-            </div>
-            <div>
-              <p>Friday:</p>
-              <p>10:00 – 19:00</p>
-            </div>
-            <div>
-              <p>Saturday:</p>
-              <p>9:00 – 16:00</p>
-            </div>
-            <div>
-              <p>Sunday:</p>
-              <p>9:00 – 13:00</p>
+            <div class="hours-section">
+              <div>
+                <p>Monday:</p>
+                <p>Tuesday:</p>
+                <p>Wednesday:</p>
+                <p>Thursday:</p>
+                <p>Friday:</p>
+                <p>Saturday:</p>
+                <p>Sunday:</p>
+              </div>
+              <div>
+                <p>Closed</p>
+                <p>10:00 – 16:00</p>
+                <p>10:00 – 16:00</p>
+                <p>10:00 – 16:00</p>
+                <p>10:00 – 16:00</p>
+                <p>9:00 – 16:00</p>
+                <p>9:00 – 13:00</p>
+              </div>
             </div>
           </article>
         </article>
@@ -144,14 +142,17 @@
     </main>
     <footer class="page-footer">
       <section class="container grid-section--4">
-        <img
-          src="/images/svg/csm-logo-white.svg"
-          alt="Community Science Museum Logo White"
-        />
+        <div class="footer-item">
+          <img
+            src="/images/svg/csm-logo-white.svg"
+            alt="Community Science Museum Logo White"
+          />
+        </div>
 
-        <article>
+        <article class="footer-item">
           <h3 class="footer-title">Navigation</h3>
           <ul class="nav-footer-list">
+            <li><a class="nav-link" href="index.html">Home</a></li>
             <li><a class="nav-link" href="explore.html">Explore</a></li>
             <li>
               <a class="nav-link" href="exhibition.html">Exhibition Spaces</a>
@@ -165,26 +166,28 @@
             </li>
           </ul>
         </article>
-        <article>
+        <article class="footer-item">
           <h3 class="footer-title">Contact</h3>
-          <ul>
-            <li><p>+47 87 65 43 21</p></li>
-            <li><p>post@csmuseum.com</p></li>
-            <li><p>Tordenskjoldsgate 9</p></li>
-            <li><p>4612 Kristiansand S</p></li>
-            <li><p>Norway</p></li>
-          </ul>
+          <div class="footer-text">
+            <p>+47 87 65 43 21</p>
+            <p>post@csmuseum.com</p>
+            <p>Tordenskjoldsgate 9</p>
+            <p>4612 Kristiansand S</p>
+            <p>Norway</p>
+          </div>
         </article>
-        <article>
+        <article class="footer-item">
           <h3 class="footer-title">Social Media</h3>
-          <div class="flex-row-gap">
-            <a href="#"><i class="fa-brands fa-facebook some-icons"></i></a>
-          </div>
-          <div class="flex-row-gap">
-            <a href="#"><i class="fa-brands fa-snapchat some-icons"></i></a>
-          </div>
-          <div class="flex-row-gap">
-            <a href=""><i class="fa-brands fa-instagram some-icons"></i></a>
+          <div class="section-flex-cards">
+            <div class="flex-row-gap">
+              <a href="#"><i class="fa-brands fa-facebook some-icons"></i></a>
+            </div>
+            <div class="flex-row-gap">
+              <a href="#"><i class="fa-brands fa-snapchat some-icons"></i></a>
+            </div>
+            <div class="flex-row-gap">
+              <a href=""><i class="fa-brands fa-instagram some-icons"></i></a>
+            </div>
           </div>
         </article>
       </section>

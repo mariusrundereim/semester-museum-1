@@ -26,29 +26,35 @@
   <body>
     <header class="primary-header">
       <section class="container flex-row-rev-space">
-        <a href="index.html">
-          <img
-            class="website-logo"
+        <a class="website-logo" href="index.html"
+          ><img
             src="/images/svg/csm-logo-white.svg"
             alt="Community Science Museum Logo"
-          />
-        </a>
+        /></a>
+        <input type="checkbox" id="menu-checkbox" />
+        <label for="menu-checkbox" class="hamburger-icon"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
 
+        <!-- Navigation -->
         <nav class="primary-nav">
           <ul class="nav-list">
-            <li class="nav-item">
+            <li class="nav-item page-tag-01 page-tag-details">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item page-tag-02 page-tag-details">
               <a class="nav-link" href="explore.html">Explore</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item page-tag-03 page-tag-details">
               <a class="nav-link" href="exhibition.html">Exhibition Spaces</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item page-tag-04 page-tag-details">
               <a class="nav-link" href="specialevents.html">Special Events</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item page-tag-05 page-tag-details">
               <a class="nav-link" href="visit.html">Visit</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item page-tag-06 page-tag-details">
               <a class="nav-link" href="get-involved.html">Get involved</a>
             </li>
           </ul>
@@ -56,7 +62,7 @@
       </section>
     </header>
     <main class="container main-wrap">
-      <h1>Explore</h1>
+      <h1 class="page-explore-number">Explore</h1>
       <section>
         <h1 class="section-title">For Kids</h1>
         <section class="kids-section-grid">
@@ -82,7 +88,12 @@
             <div class="explore-kids-image-1 img-prop"></div>
             <div class="explore-kids-image-2 img-prop"></div>
           </div>
-          <article class="card-purple card-prop kids-section-item">
+          <article class="card-purple card-prop kids-section-item pos-relative">
+            <img
+              class="graphic-element-youngstar"
+              src="/images/svg/graphic-collage-youngstar.svg"
+              alt="graphic element"
+            />
             <h2 class="sub-title">Young Stars Club</h2>
             <h3 class="card-heading">
               We also have the Young Stars club which meets once a week on a
@@ -143,14 +154,17 @@
     </main>
     <footer class="page-footer">
       <section class="container grid-section--4">
-        <img
-          src="/images/svg/csm-logo-white.svg"
-          alt="Community Science Museum Logo White"
-        />
+        <div class="footer-item">
+          <img
+            src="/images/svg/csm-logo-white.svg"
+            alt="Community Science Museum Logo White"
+          />
+        </div>
 
-        <article>
+        <article class="footer-item">
           <h3 class="footer-title">Navigation</h3>
           <ul class="nav-footer-list">
+            <li><a class="nav-link" href="index.html">Home</a></li>
             <li><a class="nav-link" href="explore.html">Explore</a></li>
             <li>
               <a class="nav-link" href="exhibition.html">Exhibition Spaces</a>
@@ -164,29 +178,28 @@
             </li>
           </ul>
         </article>
-        <article>
+        <article class="footer-item">
           <h3 class="footer-title">Contact</h3>
-          <ul>
-            <li><p>+47 87 65 43 21</p></li>
-            <li><p>post@csmuseum.com</p></li>
-            <li><p>Tordenskjoldsgate 9</p></li>
-            <li><p>4612 Kristiansand S</p></li>
-            <li><p>Norway</p></li>
-          </ul>
+          <div class="footer-text">
+            <p>+47 87 65 43 21</p>
+            <p>post@csmuseum.com</p>
+            <p>Tordenskjoldsgate 9</p>
+            <p>4612 Kristiansand S</p>
+            <p>Norway</p>
+          </div>
         </article>
-        <article>
+        <article class="footer-item">
           <h3 class="footer-title">Social Media</h3>
-          <div class="flex-row-gap">
-            <i class="fa-brands fa-facebook some-icons"></i>
-            <h4>Facebook</h4>
-          </div>
-          <div class="flex-row-gap">
-            <i class="fa-brands fa-snapchat some-icons"></i>
-            <h4>Snapchat</h4>
-          </div>
-          <div class="flex-row-gap">
-            <i class="fa-brands fa-instagram some-icons"></i>
-            <h4>Instagram</h4>
+          <div class="section-flex-cards">
+            <div class="flex-row-gap">
+              <a href="#"><i class="fa-brands fa-facebook some-icons"></i></a>
+            </div>
+            <div class="flex-row-gap">
+              <a href="#"><i class="fa-brands fa-snapchat some-icons"></i></a>
+            </div>
+            <div class="flex-row-gap">
+              <a href=""><i class="fa-brands fa-instagram some-icons"></i></a>
+            </div>
           </div>
         </article>
       </section>

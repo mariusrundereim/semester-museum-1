@@ -23,29 +23,35 @@
   <body>
     <header class="primary-header">
       <section class="container flex-row-rev-space">
-        <a href="index.html">
-          <img
-            class="website-logo"
+        <a class="website-logo" href="index.html"
+          ><img
             src="/images/svg/csm-logo-white.svg"
             alt="Community Science Museum Logo"
-          />
-        </a>
+        /></a>
+        <input type="checkbox" id="menu-checkbox" />
+        <label for="menu-checkbox" class="hamburger-icon"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
 
+        <!-- Navigation -->
         <nav class="primary-nav">
           <ul class="nav-list">
-            <li class="nav-item">
+            <li class="nav-item page-tag-01 page-tag-details">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item page-tag-02 page-tag-details">
               <a class="nav-link" href="explore.html">Explore</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item page-tag-03 page-tag-details">
               <a class="nav-link" href="exhibition.html">Exhibition Spaces</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item page-tag-04 page-tag-details">
               <a class="nav-link" href="specialevents.html">Special Events</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item page-tag-05 page-tag-details">
               <a class="nav-link" href="visit.html">Visit</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item page-tag-06 page-tag-details">
               <a class="nav-link" href="get-involved.html">Get involved</a>
             </li>
           </ul>
@@ -54,19 +60,23 @@
     </header>
     <main class="container main-wrap">
       <header>
-        <h1>Exhibition Spaces</h1>
+        <h1 class="page-exhibition-number">Exhibition Spaces</h1>
         <div class="flex-wrap">
-          <a href="#" class="btn-dark-outline btn-prop">Cosmology</a>
-          <a href="#" class="btn-dark-outline btn-prop">Evolution</a>
-          <a href="#" class="btn-dark-outline btn-prop">Biology and Medicine</a>
-          <a href="#" class="btn-dark-outline btn-prop">Robotics and AI</a>
-          <a href="#" class="btn-dark-outline btn-prop">Ecology</a>
+          <a href="#cosmology" class="btn-dark-outline btn-prop">Cosmology</a>
+          <a href="#evolution" class="btn-dark-outline btn-prop">Evolution</a>
+          <a href="#biology" class="btn-dark-outline btn-prop"
+            >Biology and Medicine</a
+          >
+          <a href="#robotics" class="btn-dark-outline btn-prop"
+            >Robotics and AI</a
+          >
+          <a href="#ecology" class="btn-dark-outline btn-prop">Ecology</a>
         </div>
       </header>
       <section class="grid-section--5">
         <!-- Cosmology -->
         <section class="section-flex-cards exhibition-section">
-          <h1 class="section-title">Cosmology</h1>
+          <h1 id="cosmology" class="section-title">Cosmology</h1>
           <div
             class="exhibition-img_01 specialevent-size img-prop pos-relative"
           >
@@ -97,7 +107,7 @@
 
         <!-- Evolution -->
         <section class="section-flex-cards exhibition-section">
-          <h1 class="section-title">Evolution</h1>
+          <h1 id="evolution" class="section-title">Evolution</h1>
           <div
             class="exhibition-img_02 specialevent-size img-prop pos-relative"
           >
@@ -129,7 +139,7 @@
 
         <!-- Biology and Medicine -->
         <section class="section-flex-cards exhibition-section">
-          <h1 class="section-title">Biology and Medicine</h1>
+          <h1 id="biology" class="section-title">Biology and Medicine</h1>
           <div
             class="exhibition-img_03 specialevent-size img-prop pos-relative"
           >
@@ -163,7 +173,7 @@
 
         <!-- Robotics and AI -->
         <section class="section-flex-cards exhibition-section">
-          <h1 class="section-title">Robotics and AI</h1>
+          <h1 id="robotics" class="section-title">Robotics and AI</h1>
           <div
             class="exhibition-img_04 specialevent-size img-prop pos-relative"
           >
@@ -190,7 +200,7 @@
 
         <!-- Ecology -->
         <section class="section-flex-cards exhibition-section">
-          <h1 class="section-title">Ecology</h1>
+          <h1 id="ecology" class="section-title">Ecology</h1>
           <div
             class="exhibition-img_05 specialevent-size img-prop pos-relative"
           >
@@ -222,14 +232,17 @@
     </main>
     <footer class="page-footer">
       <section class="container grid-section--4">
-        <img
-          src="/images/svg/csm-logo-white.svg"
-          alt="Community Science Museum Logo White"
-        />
+        <div class="footer-item">
+          <img
+            src="/images/svg/csm-logo-white.svg"
+            alt="Community Science Museum Logo White"
+          />
+        </div>
 
-        <article>
+        <article class="footer-item">
           <h3 class="footer-title">Navigation</h3>
           <ul class="nav-footer-list">
+            <li><a class="nav-link" href="index.html">Home</a></li>
             <li><a class="nav-link" href="explore.html">Explore</a></li>
             <li>
               <a class="nav-link" href="exhibition.html">Exhibition Spaces</a>
@@ -243,26 +256,28 @@
             </li>
           </ul>
         </article>
-        <article>
+        <article class="footer-item">
           <h3 class="footer-title">Contact</h3>
-          <ul>
-            <li><p>+47 87 65 43 21</p></li>
-            <li><p>post@csmuseum.com</p></li>
-            <li><p>Tordenskjoldsgate 9</p></li>
-            <li><p>4612 Kristiansand S</p></li>
-            <li><p>Norway</p></li>
-          </ul>
+          <div class="footer-text">
+            <p>+47 87 65 43 21</p>
+            <p>post@csmuseum.com</p>
+            <p>Tordenskjoldsgate 9</p>
+            <p>4612 Kristiansand S</p>
+            <p>Norway</p>
+          </div>
         </article>
-        <article>
+        <article class="footer-item">
           <h3 class="footer-title">Social Media</h3>
-          <div class="flex-row-gap">
-            <a href="#"><i class="fa-brands fa-facebook some-icons"></i></a>
-          </div>
-          <div class="flex-row-gap">
-            <a href="#"><i class="fa-brands fa-snapchat some-icons"></i></a>
-          </div>
-          <div class="flex-row-gap">
-            <a href=""><i class="fa-brands fa-instagram some-icons"></i></a>
+          <div class="section-flex-cards">
+            <div class="flex-row-gap">
+              <a href="#"><i class="fa-brands fa-facebook some-icons"></i></a>
+            </div>
+            <div class="flex-row-gap">
+              <a href="#"><i class="fa-brands fa-snapchat some-icons"></i></a>
+            </div>
+            <div class="flex-row-gap">
+              <a href=""><i class="fa-brands fa-instagram some-icons"></i></a>
+            </div>
           </div>
         </article>
       </section>

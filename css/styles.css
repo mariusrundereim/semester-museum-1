@@ -20,11 +20,11 @@
   --border-normal: 5px;
   --border-all: 2px solid rgba(0, 0, 0, 0.1);
 
-  --font-xl: clamp(2rem, 3.5vw, 3.5rem);
-  --font-l: clamp(1.85rem, 3.5vw, 2.6rem);
-  --font-m: clamp(1.65rem, 3.5vw, 1.6rem);
-  --font-s: clamp(1.4rem, 3.5vw, 1.4rem);
-  --font-xs: clamp(0.9rem, 3.5vw, 1rem);
+  --font-xl: clamp(1.85rem, 3.5vw, 3.2rem);
+  --font-l: clamp(1.75rem, 3.5vw, 2.4rem);
+  --font-m: clamp(1.45rem, 3.5vw, 1.3rem);
+  --font-s: clamp(1.3rem, 3.5vw, 1rem);
+  --font-xs: clamp(0.9rem, 3.5vw, 0.8rem);
   --font-paragraph: 1.25rem;
 
   --gap-xxl: 5rem;
@@ -55,6 +55,46 @@ body {
   margin-bottom: 3.5rem;
 }
 
+/* Responsive Header - Start */
+
+#menu-checkbox,
+nav {
+  display: none;
+}
+
+header {
+  position: relative;
+}
+
+nav {
+  position: absolute;
+  /* background: var(--color-1); */
+  top: 0;
+  left: 0;
+}
+
+#menu-checkbox:checked ~ nav {
+  display: block;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 8px 0px;
+}
+
+.fa-bars {
+  color: white;
+  font-size: 2rem;
+}
+
+/* Responsive Header - End */
+
 /* Header */
 
 .primary-header {
@@ -65,20 +105,20 @@ body {
     rgba(185, 29, 253, 1) 50%,
     rgba(252, 107, 69, 1) 100%
   );
-  padding: 2rem 0.5rem;
+  padding: 2rem;
 }
 
-.website-logo {
-  width: 200px;
+.website-logo img {
+  width: min(100% - 1rem, 95em);
 }
 
-.nav-list {
+/* .nav-list {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   list-style: none;
   padding-left: 0;
-}
+} */
 
 .nav-link {
   font-size: 1.3rem;
@@ -89,6 +129,37 @@ body {
 
 .nav-link:hover {
   color: var(--color-2);
+}
+
+.page-tag-01::before {
+  content: "01";
+}
+
+.page-tag-02::before {
+  content: "02";
+}
+
+.page-tag-03::before {
+  content: "03";
+}
+
+.page-tag-04::before {
+  content: "04";
+}
+
+.page-tag-05::before {
+  content: "05";
+}
+
+.page-tag-06::before {
+  content: "06";
+}
+
+.page-tag-details::before {
+  /* display: block; */
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* Hero */
@@ -108,6 +179,10 @@ body {
 }
 
 /* Flexbox */
+
+.flex {
+  display: flex;
+}
 
 .section-flex-cards {
   display: flex;
@@ -129,11 +204,18 @@ body {
   align-items: center;
 }
 
+.flex-row-rev-flip {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .flex-row-rev-space {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .flex-wrap {
@@ -141,6 +223,12 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   gap: var(--gap-s);
+}
+
+.flex-col-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-m);
 }
 
 /* Grid */
@@ -159,7 +247,7 @@ body {
 
 .grid-section--3 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--gap-l);
 }
 
@@ -174,6 +262,13 @@ body {
   grid-template-columns: 10rem 1fr 10rem;
   grid-template-rows: repeat(5, 1fr);
   gap: var(--gap-xxl);
+}
+
+.grid-section--footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: var(--gap-l);
 }
 
 /* Cards */
@@ -205,30 +300,36 @@ body {
   padding: 1.5rem;
 }
 
-/* Event images */
+/*** Height ***/
 
-.event-image-1 {
-  background-image: url(/images/specialevent_img_01.jpg);
-}
-
-.event-image-2 {
-  background-image: url(/images/specialevent_img_02.jpg);
-}
-
-.event-image-3 {
-  background-image: url(/images/specialevent_img_03.jpg);
-}
-
-.event-home-size {
+.specialevent-size {
   width: 100%;
-  height: 290px;
+  min-height: 400px;
 }
+
+.height-m {
+  min-height: 20rem;
+  border: 2px solid blue;
+}
+
+.height-l {
+  min-height: 30rem;
+}
+
+/* Properties */
 
 .img-prop {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   border-radius: var(--border-normal);
+  transition: var(--transition-2);
+}
+
+.img-prop:hover {
+  background-size: 110%;
+  rotate: -1deg;
+  filter: hue-rotate(10deg);
 }
 
 /* Buttons */
@@ -319,7 +420,23 @@ body {
   width: 100%;
 }
 
+.graphic-element-01 {
+  width: min(100% - 1rem, 40rem);
+}
+
+.hours-section {
+  display: flex;
+  justify-content: space-between;
+  width: min(100%, 20rem);
+}
+
 /****** Explore ******/
+
+.page-explore-number::before {
+  content: "02";
+  display: block;
+  font-size: 1.2rem;
+}
 
 .explore-kids-image-1 {
   background-image: url(/images/explore-kids-image-01.jpg);
@@ -349,7 +466,19 @@ body {
   grid-row: 1 / 3;
 }
 
+.graphic-element-youngstar {
+  position: absolute;
+  right: 80px;
+  top: -50px;
+}
+
 /****** Exhibition Spaces ******/
+
+.page-exhibition-number::before {
+  content: "03";
+  display: block;
+  font-size: 1.2rem;
+}
 
 .pos-relative {
   position: relative;
@@ -412,17 +541,22 @@ body {
 
 /****** Special Events & Exhibitions ******/
 
+.page-events-number::before {
+  content: "04";
+  display: block;
+  font-size: 1.2rem;
+}
+
+.graphic-element-specialevent {
+  width: min(100% - 1rem, 15rem);
+}
+
 .section-header {
   width: min(100% - 2rem, 50rem);
 }
 
 .article-margin {
   margin: 3rem;
-}
-
-.specialevent-size {
-  width: 100%;
-  min-height: 400px;
 }
 
 .event-card-grid {
@@ -438,16 +572,49 @@ body {
   order: 1;
 }
 
+.event-image-1 {
+  background-image: url(/images/specialevent_img_01.jpg);
+}
+
+.event-image-2 {
+  background-image: url(/images/specialevent_img_02.jpg);
+}
+
+.event-image-3 {
+  background-image: url(/images/specialevent_img_03.jpg);
+}
+
+.event-home-size {
+  width: 100%;
+  height: 290px;
+}
+
 /****** Visit ******/
+
+.page-visit-number::before {
+  content: "05";
+  display: block;
+  font-size: 1.2rem;
+}
 
 .museum-store-image-1 {
   background-image: url(/images/museum-store-image-1.jpg);
 }
 
-/* Get involved */
+/****** Get involved ******/
+
+.page-getinvolved-number::before {
+  content: "06";
+  display: block;
+  font-size: 1.2rem;
+}
 
 .getinvolved-image-01 {
   background-image: url(/images/getinvolved-image-01.jpg);
+}
+
+.img-tester {
+  min-height: 280px;
 }
 
 /* Footer */
@@ -455,6 +622,10 @@ body {
 .page-footer {
   background: var(--color-4);
   padding: 1rem 0.5rem;
+}
+
+.footer-text {
+  color: white;
 }
 
 .nav-footer-list {
