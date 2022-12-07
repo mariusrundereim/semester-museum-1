@@ -1,9 +1,5 @@
-/* Medium devices */
+/* Large breakpoint */
 @media screen and (max-width: 1000px) {
-  /* body {
-    background: rgb(139, 0, 139);
-  } */
-
   .primary-nav {
     display: none;
   }
@@ -37,18 +33,6 @@
   .grid-section--5 {
     grid-template-columns: 1fr;
   }
-
-  /* .grid-section--footer {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
-  }
-
-  .footer-item:nth-child(1) {
-    display: grid;
-    grid-column: 1 / 4;
-    border: blue 1px solid;
-    justify-items: end;
-  } */
 
   .card-prop {
     padding: 0.8rem;
@@ -104,7 +88,13 @@
   }
 }
 
-/* Small devices */
+@media screen and (max-width: 560px) {
+  body {
+    background: lightslategrey;
+  }
+}
+
+/* Mobile devices */
 @media screen and (max-width: 400px) {
   .grid-section--2 {
     grid-template-columns: repeat(1, 1fr);
@@ -117,16 +107,32 @@
   }
 }
 
-/* Responsive Menu - Start */
+/* Responsive Menu */
 
-@media (min-width: 1000px) {
+@media (min-width: 1070px) {
   nav {
     display: block;
     position: static;
   }
 
+  .nav-list {
+    display: flex;
+  }
+
   .hamburger-icon {
     display: none;
+  }
+
+  .page-tag-details::before {
+    display: block;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
   }
 
   nav a {
@@ -134,7 +140,7 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1070px) {
   nav {
     background: var(--color-1);
     margin-top: 10rem;
@@ -143,5 +149,3 @@
     border-radius: var(--border-normal);
   }
 }
-
-/* Responsive Menu - End */

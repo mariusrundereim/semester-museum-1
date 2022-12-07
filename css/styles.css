@@ -321,13 +321,12 @@ nav a {
 .img-prop {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   border-radius: var(--border-normal);
   transition: var(--transition-2);
 }
 
 .img-prop:hover {
-  background-size: 110%;
   rotate: -1deg;
   filter: hue-rotate(10deg);
 }
