@@ -1,22 +1,3 @@
-/*
---font-xl: clamp(2rem, 3.5vw, 3.5rem);
---font-l: 42px;
---font-m: 27px;
---font-s: 23px;
---font-xs: 17px;  
-*/
-
-/* h1 {
-  font-size: var(--font-xl);
-  font-weight: 600;
-} */
-
-/* h2 {
-  font-size: var(--font-m);
-  font-weight: 500;
-  margin-bottom: 1rem;
-} */
-
 h3 {
   font-size: var(--font-m);
   font-weight: 400;
@@ -39,7 +20,7 @@ p {
 .section-title {
   font-size: var(--font-l);
   font-weight: 500;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .sub-title {

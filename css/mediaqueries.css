@@ -23,7 +23,8 @@
   }
 
   .grid-section--3 {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
   }
 
   .grid-section--4 {
@@ -85,12 +86,6 @@
 
   .event-card-item:nth-child(2) {
     order: 2;
-  }
-}
-
-@media screen and (max-width: 560px) {
-  body {
-    background: lightslategrey;
   }
 }
 

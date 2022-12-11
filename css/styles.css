@@ -55,6 +55,17 @@ body {
   margin-bottom: 3.5rem;
 }
 
+.wrap-gap {
+  gap: 3rem;
+}
+
+.section-gap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+  border: red 2px dashed;
+}
+
 /* Responsive Header - Start */
 
 #menu-checkbox,
@@ -249,6 +260,7 @@ nav a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap-l);
+  grid-auto-flow: column;
 }
 
 .grid-section--4 {
@@ -296,7 +308,8 @@ nav a {
 .card-prop {
   border: var(--border-all);
   border-radius: var(--border-normal);
-  min-height: min-content;
+  /* min-height: min-content; */
+  height: 100%;
   padding: 1.5rem;
 }
 
