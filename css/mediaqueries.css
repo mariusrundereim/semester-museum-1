@@ -1,5 +1,9 @@
 /* Large breakpoint */
 @media screen and (max-width: 1000px) {
+  body {
+    background: lightblue;
+  }
+
   .primary-nav {
     display: none;
   }
@@ -33,11 +37,6 @@
 
   .grid-section--5 {
     grid-template-columns: 1fr;
-  }
-
-  .card-prop {
-    padding: 0.8rem;
-    margin-bottom: 1rem;
   }
 
   /* Explore */
@@ -142,5 +141,6 @@
     width: 100%;
     padding: 20px 0px;
     border-radius: var(--border-normal);
+    z-index: 10;
   }
 }

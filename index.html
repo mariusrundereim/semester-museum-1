@@ -8,7 +8,7 @@
     <meta name="description" content="Frontpage of Community Science Museum" />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/mediaqueries.css" />
-    <link rel="stylesheet" href="/css/fontstyles.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,7 +21,7 @@
     ></script>
   </head>
   <body>
-    <header class="primary-header">
+    <header class="primary-header-animate box-overflow">
       <section class="container flex-row-rev-space">
         <a class="website-logo" href="index.html"
           ><img
@@ -58,7 +58,12 @@
         </nav>
       </section>
       <!-- Hero -->
-      <section class="container hero-section flex-row-rev-space">
+      <section class="container hero-section grid-section--3">
+        <div>
+          <h1 class="hero-title">
+            Where we’re committed to making science accessible to all.
+          </h1>
+        </div>
         <div>
           <img
             class="graphic-element-01"
@@ -66,14 +71,10 @@
             alt="Graphical element on Hero section"
           />
         </div>
-        <div>
-          <h1 class="hero-title">
-            Where we’re committed to making science accessible to all.
-          </h1>
-        </div>
       </section>
     </header>
     <main class="container main-wrap">
+      <!-- Great to know -->
       <section>
         <h1 class="section-title">Great to know</h1>
         <div class="grid-section--1">
@@ -85,7 +86,7 @@
             </article>
             <article>
               <h2 class="sub-title">Contact</h2>
-              <p>+47 87 65 43 21</p>
+              <p class="a-blank">+47 87 65 43 21</p>
               <p>post@csmuseum.com</p>
             </article>
             <article>
@@ -115,6 +116,7 @@
           <section class="museum-image-1 img-tester img-prop"></section>
         </div>
       </section>
+      <!-- News -->
       <section>
         <h1 class="section-title">News</h1>
         <div class="grid-section--2">
@@ -122,22 +124,29 @@
             <div class="event-image-1 event-home-size img-prop"></div>
             <p class="date-title">03.12.2022</p>
             <h2 class="sub-title">Visiting Professor of Aeronautics</h2>
-            <a href="#" class="btn-primary btn-prop">Read more</a>
+            <a href="specialevents.html" class="btn-primary btn-prop"
+              >Read more</a
+            >
           </article>
           <article class="card-prop">
             <div class="event-image-2 event-home-size img-prop"></div>
             <p class="date-title">03.12.2022</p>
             <h2 class="sub-title">Night in the Museum</h2>
-            <a href="#" class="btn-primary btn-prop">Read more</a>
+            <a href="specialevents.html" class="btn-primary btn-prop"
+              >Read more</a
+            >
           </article>
           <article class="card-prop">
             <div class="event-image-3 event-home-size img-prop"></div>
             <p class="date-title">03.12.2022</p>
             <h2 class="sub-title">Energetica Exhibition on Loan</h2>
-            <a href="#" class="btn-primary btn-prop">Read more</a>
+            <a href="specialevents.html" class="btn-primary btn-prop"
+              >Read more</a
+            >
           </article>
         </div>
       </section>
+      <!-- Visit us -->
       <section>
         <h1 class="section-title">Visit us</h1>
         <article class="card-prop grid-section--3">
@@ -223,7 +232,7 @@
         <article class="footer-item">
           <h3 class="footer-title">Contact</h3>
           <div class="footer-text">
-            <p>+47 87 65 43 21</p>
+            <p class="a-blank">+47 87 65 43 21</p>
             <p>post@csmuseum.com</p>
             <p>Tordenskjoldsgate 9</p>
             <p>4612 Kristiansand S</p>

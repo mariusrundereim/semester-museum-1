@@ -104,8 +104,6 @@ nav a {
   font-size: 2rem;
 }
 
-/* Responsive Header - End */
-
 /* Header */
 
 .primary-header {
@@ -119,17 +117,37 @@ nav a {
   padding: 2rem;
 }
 
+.box-overflow {
+  overflow: hidden;
+}
+
+.primary-header-animate {
+  background: linear-gradient(
+    90deg,
+    rgba(74, 21, 110, 1) 0%,
+    rgba(185, 29, 253, 1) 50%,
+    rgba(252, 107, 69, 1) 100%
+  );
+  background-size: 200% 200%;
+  animation: move-2 30s ease infinite;
+  padding: 2rem;
+}
+
+@keyframes move-2 {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .website-logo img {
   width: min(100% - 1rem, 95em);
 }
-
-/* .nav-list {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  list-style: none;
-  padding-left: 0;
-} */
 
 .nav-link {
   font-size: 1.3rem;
@@ -139,7 +157,10 @@ nav a {
 }
 
 .nav-link:hover {
-  color: var(--color-2);
+  color: var(--color-5);
+  background: var(--color-4-trans);
+  border-radius: var(--border-normal);
+  padding: 0.5rem;
 }
 
 .page-tag-01::before {
@@ -187,6 +208,72 @@ nav a {
   font-weight: 400;
   text-transform: uppercase;
   display: block;
+}
+
+/* Font Styles */
+
+h3 {
+  font-size: var(--font-m);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: var(--font-s);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: var(--font-paragraph);
+  margin-bottom: 0.7rem;
+}
+
+.section-title {
+  font-size: var(--font-l);
+  font-weight: 500;
+  /* margin-bottom: 1rem; */
+}
+
+.sub-title {
+  font-size: var(--font-m);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.card-heading {
+  font-size: 1.75rem;
+}
+
+/* Additional Fontstyles */
+
+.hero-title {
+  color: white;
+  font-size: clamp(2.6rem, 3.5vw, 6rem);
+  font-weight: 500;
+}
+
+.footer-title {
+  color: var(--color-2);
+  font-size: var(--font-m);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.some-title {
+  color: white;
+  font-size: var(--font-s);
+  font-weight: 400;
+}
+
+.date-title {
+  margin-top: 1rem;
 }
 
 /* Flexbox */
@@ -308,9 +395,11 @@ nav a {
 .card-prop {
   border: var(--border-all);
   border-radius: var(--border-normal);
-  /* min-height: min-content; */
-  height: 100%;
   padding: 1.5rem;
+}
+
+.card-h {
+  height: calc(100% - 5%);
 }
 
 /*** Height ***/
@@ -433,13 +522,18 @@ nav a {
 }
 
 .graphic-element-01 {
-  width: min(100% - 1rem, 40rem);
+  min-height: 10rem;
+  max-width: 40rem;
 }
 
 .hours-section {
   display: flex;
   justify-content: space-between;
   width: min(100%, 20rem);
+}
+
+.a-blank {
+  text-decoration: none;
 }
 
 /****** Explore ******/
@@ -506,8 +600,6 @@ nav a {
 
 .exhibition-section {
   display: grid;
-  justify-items: stretch;
-  align-items: stretch;
 }
 
 .exhibition-section:nth-child(1) {
@@ -611,6 +703,14 @@ nav a {
 
 .museum-store-image-1 {
   background-image: url(/images/museum-store-image-1.jpg);
+}
+
+.map-container {
+  width: 100%;
+  height: 30rem;
+  border: var(--border-all);
+  border-radius: var(--border-normal);
+  overflow: hidden;
 }
 
 /****** Get involved ******/
