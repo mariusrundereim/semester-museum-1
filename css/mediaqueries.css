@@ -1,11 +1,14 @@
 /* Large breakpoint */
-@media screen and (max-width: 1000px) {
-  body {
-    background: lightblue;
-  }
-
+@media screen and (max-width: 1360px) {
   .primary-nav {
     display: none;
+  }
+
+  .flex-space-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--gap-l);
   }
 
   .flex-row-rev-space {
@@ -27,8 +30,8 @@
   }
 
   .grid-section--3 {
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
   .grid-section--4 {
@@ -37,6 +40,8 @@
 
   .grid-section--5 {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: var(--gap-m);
   }
 
   /* Explore */
@@ -89,9 +94,13 @@
 }
 
 /* Mobile devices */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 390px) {
   .grid-section--2 {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-h {
+    height: auto;
   }
 
   /* Explore */
@@ -103,7 +112,7 @@
 
 /* Responsive Menu */
 
-@media (min-width: 1070px) {
+@media (min-width: 1360px) {
   nav {
     display: block;
     position: static;
@@ -134,7 +143,7 @@
   }
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1360px) {
   nav {
     background: var(--color-1);
     margin-top: 10rem;

@@ -399,7 +399,7 @@ p {
 }
 
 .card-h {
-  height: calc(100% - 5%);
+  height: 100%;
 }
 
 /*** Height ***/
@@ -598,9 +598,9 @@ p {
   margin: 1rem;
 }
 
-.exhibition-section {
+/* .exhibition-section {
   display: grid;
-}
+} */
 
 .exhibition-section:nth-child(1) {
   grid-column: 1 / 3;
