@@ -55,17 +55,6 @@ body {
   margin-bottom: 3.5rem;
 }
 
-.wrap-gap {
-  gap: 3rem;
-}
-
-.section-gap {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 5rem;
-  border: red 2px dashed;
-}
-
 /* Responsive Header - Start */
 
 #menu-checkbox,
@@ -232,7 +221,6 @@ p {
 .section-title {
   font-size: var(--font-l);
   font-weight: 500;
-  /* margin-bottom: 1rem; */
 }
 
 .sub-title {
@@ -454,7 +442,7 @@ p {
 
 .btn-purple:hover {
   background: var(--color-3);
-  padding: 0.5rem 1.3rem;
+  padding: 0.9rem 2.3rem;
   letter-spacing: 2px;
 }
 
@@ -502,7 +490,7 @@ p {
 .btn-prop {
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 2rem;
   border-radius: var(--border-normal);
   display: block;
   width: max-content;
@@ -533,7 +521,7 @@ p {
 }
 
 .a-blank {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /****** Explore ******/
