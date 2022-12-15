@@ -44,6 +44,10 @@
     gap: var(--gap-m);
   }
 
+  .card-prop {
+    padding: 0.8rem;
+  }
+
   /* Explore */
 
   .kids-section-grid {
